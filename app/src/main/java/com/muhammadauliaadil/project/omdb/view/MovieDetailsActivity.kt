@@ -36,14 +36,14 @@ class MovieDetailsActivity : AppCompatActivity() {
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(poster)
         card_view.visibility = View.GONE
-        getMovieData(intent.getStringExtra("title"))
+        getMovieData(intent.getStringExtra("title").orEmpty())
     }
 
     fun getMovieData(query: String) {
         progressbar.visibility = View.VISIBLE
         movieDetailsViewModel.getMovieData(query)
         movieDetailsViewModel.statusResponse?.observe(this, Observer { statusResponse->
-            Log.d("statusResponseDiActivity", movieDetailsViewModel.statusResponse?.value)
+            Log.d("statusResponseDiActivity", movieDetailsViewModel.statusResponse?.value.orEmpty())
             when (movieDetailsViewModel.statusResponse?.value) {
                 "SUCCESS_FOUND" -> {
                     movie = movieDetailsViewModel.movie

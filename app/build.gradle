@@ -45,10 +45,10 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
 
     // Layout
-    implementation "androidx.gridlayout:gridlayout:$androidx_version"
-    implementation "androidx.cardview:cardview:$androidx_version"
+    implementation "androidx.gridlayout:gridlayout:1.0.0"
+    implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.recyclerview:recyclerview:$androidx_version"
-    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidx_version"
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     implementation "androidx.recyclerview:recyclerview:$androidx_version"
 
     // Glide
