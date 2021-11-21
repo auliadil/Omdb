@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Omdb - Movie Reviews</string>
+    <string name="no_connectivity">You could not connect to internet</string>
+</resources>
